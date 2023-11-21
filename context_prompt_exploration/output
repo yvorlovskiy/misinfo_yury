@@ -1,0 +1,38 @@
+digraph {
+	{
+		rank=same
+		"Evidence and Verification"
+		"Visual Evidence/Verification"
+		"Evidence and Verification" -> "Visual Evidence/Verification"
+		"Visual Evidence/Verification_items" [label="(video, evidence), (photo, evidence), (image, evidence), (image, verification), (photo, verification)" shape=record]
+		"Visual Evidence/Verification" -> "Visual Evidence/Verification_items"
+		"Audio Evidence"
+		"Evidence and Verification" -> "Audio Evidence"
+		"Audio Evidence_items" [label="(audio, evidence)" shape=record]
+		"Audio Evidence" -> "Audio Evidence_items"
+		"Statistical Evidence/Verification"
+		"Evidence and Verification" -> "Statistical Evidence/Verification"
+		"Statistical Evidence/Verification_items" [label="(statistical, evidence), (crime, statistics), (job, statistics), (voter, statistics), (vaccination, statistics), (economic, data), (inflation, rate), (salary, data), (price, data)" shape=record]
+		"Statistical Evidence/Verification" -> "Statistical Evidence/Verification_items"
+		"Policy and Legislative Evidence/Verification"
+		"Evidence and Verification" -> "Policy and Legislative Evidence/Verification"
+		"Policy and Legislative Evidence/Verification_items" [label="(policy, evidence), (policy, specifics), (legislation, evidence), (tax, legislation), (current, legislation), (bill, number)" shape=record]
+		"Policy and Legislative Evidence/Verification" -> "Policy and Legislative Evidence/Verification_items"
+		"Source Verification"
+		"Evidence and Verification" -> "Source Verification"
+		"Source Verification_items" [label="(source, verification), (verification, source), (source, credibility), (source, reliability), (news, source), (data, source), (confirmation, source)" shape=record]
+		"Source Verification" -> "Source Verification_items"
+	}
+	{
+		rank=same
+		"Date and Time Context"
+		"Date and Time Context_items" [label="(event, date), (tweet, date), (publication, date), (broadcast, date), (speech, date)" shape=record]
+		"Date and Time Context" -> "Date and Time Context_items"
+	}
+	{
+		rank=same
+		"Miscellaneous Context"
+		"Miscellaneous Context_items" [label="(event, context), (speech, context), (contextual, evidence), (historical, evidence), (current, evidence), (photograph, evidence)" shape=record]
+		"Miscellaneous Context" -> "Miscellaneous Context_items"
+	}
+}
